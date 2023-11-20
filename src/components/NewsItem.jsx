@@ -8,7 +8,7 @@ export class NewsItem extends Component {
     return (
       <div>
       <div className="card mx-3" Style="width: 18rem;">
-  <img src={!ImgUrl?"https://picsum.photos/id/870/200/300?grayscale&blur=2":ImgUrl} class="card-img-top" alt="..." />
+  <img src={!ImgUrl?"https://picsum.photos/id/237/200/120":ImgUrl} class="card-img-top" alt="..." />
   <div class="card-body">
     <h5 class="card-title">{title}...</h5>
     <p class="card-text">{description}...</p>
