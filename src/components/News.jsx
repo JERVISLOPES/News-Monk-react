@@ -93,7 +93,7 @@ export default class News extends Component {
 
     return (
       <>
-      <h1 className='text-center'>NewsMonk - Top Headlines</h1>
+      <h1 className='text-center mt-5 justify-content-around'>NewsMonk - Top Headlines</h1>
       {/* {this.state.loading && <Spinner/>} */}
       <InfiniteScroll
           dataLength={this.state.articles.length}
@@ -104,9 +104,9 @@ export default class News extends Component {
         <div className='container'>
 
         </div>
-      <div className='row my-3'>
+      <div className='row my-3 justify-content-around'>
        {this.state.articles.map((element)=>{
-        return  <div className='col-md-4' key={element.url} >
+        return  <div className='col-md-4 justify-content-around' key={element.url} >
         <NewsItem title={element.title?element.title.slice(0, 45):""}
             description={element.description?element.description.slice(0, 88):""} ImgUrl={element.urlToImage} NewsUrl={element.url} />
         </div>
@@ -115,11 +115,7 @@ export default class News extends Component {
 
       
       </InfiniteScroll>
-      {/* <div className="container d-flex justify-content-between">
-    <button disabled={this.state.page<=1} type="button" class="btn btn-dark" onClick={this.handlePrevClick}> &larr;
-        Previous</button>
-    <button disabled={(this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize))}  type="button" class="btn btn-dark" onClick={this.handleNextClick}>Next &rarr;</button>
-</div> */}
+
 </>
       
 
